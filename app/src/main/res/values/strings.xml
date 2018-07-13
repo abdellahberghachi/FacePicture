@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FacePhoto</string>
+    <string name="facebook_app_id">840917939435817</string>
+    <string name="fb_login_protocol_scheme">fb840917939435817</string>
+    <string name="title">GET IN TOUCH \n  YOUR SECRET PHOTO ALBUM</string>
+    <string name="confirm">Confirm</string>
+
+</resources>
