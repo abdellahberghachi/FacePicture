@@ -20,11 +20,7 @@ class App : Application() {
 
     }
 
-    override fun onCreate() {
-        super.onCreate()
-        FacebookSdk.sdkInitialize(this)
-        AppEventsLogger.activateApp(this)
-    }
+
 
     private fun initDagger() {
         mAppComponent = DaggerAppComponent.builder()
