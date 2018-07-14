@@ -28,7 +28,6 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
     }
 
     override fun initEvents() {
@@ -71,7 +70,6 @@ class MainActivity : BaseActivity() {
 
     override fun initWi() {
         callbackManager = CallbackManager.Factory.create()
-
         //check if user is already logged then start automatically the ablums activity
         if (AccessToken.getCurrentAccessToken() != null) {
             startActivity(Intent(this@MainActivity, AlbumsActivity::class.java))

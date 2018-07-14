@@ -4,9 +4,11 @@ import android.app.Application
 import com.example.abdellahberghachi.facephoto.di.AppComponent
 import com.example.abdellahberghachi.facephoto.di.AppModule
 import com.example.abdellahberghachi.facephoto.di.DaggerAppComponent
+import com.facebook.FacebookSdk
+import com.facebook.appevents.AppEventsLogger
 import timber.log.Timber
 
-class App:Application() {
+class App : Application() {
 
     companion object {
         lateinit var mAppComponent: AppComponent
@@ -15,8 +17,14 @@ class App:Application() {
     init {
         initDagger()
         Timber.plant(Timber.DebugTree())
+
     }
 
+    override fun onCreate() {
+        super.onCreate()
+        FacebookSdk.sdkInitialize(this)
+        AppEventsLogger.activateApp(this)
+    }
 
     private fun initDagger() {
         mAppComponent = DaggerAppComponent.builder()
